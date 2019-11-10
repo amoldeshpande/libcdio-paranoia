@@ -33,8 +33,10 @@
 #define MIN_SILENCE_BOUNDARY 1024   /* 16 bit words */
 #define CACHEMODEL_SECTORS   1200
 
+#ifndef min
 #define min(x,y) ((x)>(y)?(y):(x))
 #define max(x,y) ((x)<(y)?(y):(x))
+#endif
 
 #include "isort.h"
 

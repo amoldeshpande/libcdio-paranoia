@@ -32,6 +32,9 @@
 #ifdef HAVE_STDLIB_H
 # include <stdlib.h>
 #endif
+#if _MSC_VER
+#include <malloc.h>
+#endif
 
 #include <stdio.h>
 

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+
+    <libcdiodir>$(SolutionDir)..\..\libcdio</libcdiodir>
+    <OutDir>$(SolutionDir)Output\$(Configuration)\$(Platform)\</OutDir>
+    <Intdir>$(SolutionDir)Intermediate\$(Configuration)\$(Platform)\$(ProjectName)\</Intdir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(libcdiodir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(Projectdir)\Output\$(Configuration)\$(Platform);$(libcdiodir)\MSVC\Output\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);winmm.lib;libcdio.lib;libcdda-interface.lib;libcdparanoia.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

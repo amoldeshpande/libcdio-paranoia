@@ -39,3 +39,6 @@
 /test/data/cdda-be.cue
 /test/data/cdda-le.bin
 /test/data/cdda-le.cue
+MSVC/.vs/
+MSVC/Intermediate/
+MSVC/Output/

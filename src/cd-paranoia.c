@@ -71,7 +71,9 @@
 #endif
 
 #include <math.h>
+#if !_MSC_VER
 #include <sys/time.h>
+#endif
 
 #ifdef HAVE_SYS_STAT_H
 # include <sys/stat.h>
